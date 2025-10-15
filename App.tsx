@@ -148,11 +148,10 @@ const App: React.FC = () => {
           ${subtitles}
           ---
         `;
-      // FIX: Use process.env.API_KEY as per the coding guidelines.
-      if (!import.meta.env.VITE_API_KEY) {
-        throw new Error("API_KEY is not configured.");
+      if (!process.env.API_KEY) {
+        throw new Error("API 金鑰未設定。請檢查您的 .env.local 檔案或 Vercel 環境變數。");
       }
-      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
@@ -205,11 +204,10 @@ const App: React.FC = () => {
     });
 
     try {
-      // FIX: Use process.env.API_KEY as per the coding guidelines.
-      if (!import.meta.env.VITE_API_KEY) {
-        throw new Error("API_KEY is not configured.");
+      if (!process.env.API_KEY) {
+        throw new Error("API 金鑰未設定。請檢查您的 .env.local 檔案或 Vercel 環境變數。");
       }
-      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       
       const systemInstruction = `
 I. 核心身份與目標

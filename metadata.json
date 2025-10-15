@@ -1,5 +1,5 @@
 {
   "name": "韓劇韓綜字幕翻譯機",
-  "description": "一個專為韓劇與韓綜設計的智能字幕翻譯工具，能將各種語言的字幕根據台灣地區的用詞習慣與文化語境，精準翻譯成流暢的繁體中文。",
+  "description": "An AI-powered tool for translating Korean drama and variety show subtitles into Taiwanese Traditional Chinese, with a focus on cultural context and natural language.",
   "requestFramePermissions": []
 }

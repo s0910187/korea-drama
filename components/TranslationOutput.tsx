@@ -31,7 +31,7 @@ export const TranslationOutput: React.FC<TranslationOutputProps> = ({
       setCopyButtonText('已複製！');
       setTimeout(() => setCopyButtonText('複製內容'), 2000);
     }, (err) => {
-      console.error('Could not copy text: ', err);
+      console.error('無法複製文字：', err);
       setCopyButtonText('複製失敗');
       setTimeout(() => setCopyButtonText('複製內容'), 2000);
     });
